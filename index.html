@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- the website made by :  -->
+    <meta name="anchor" content="Ibrahim jehad al sahhar" />
+    <!-- keyword meta  -->
+    <meta name="keyword" content="html css js  " />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sriracha"
+    />
+    <!-- Main  file Css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Icon Of Website -->
+    <link rel="icon" type="png/jpeg" href="/images/bluecollar-brand-icon.svg" />
+    <title>Name Tag Generator</title>
+  </head>
+  <body>
+    <!-- Start Title  -->
+    <div class="title">
+      <div style="--for-delay: 1">N</div>
+      <div style="--for-delay: 2">a</div>
+      <div style="--for-delay: 3">m</div>
+      <div style="--for-delay: 4">e</div>
+      <div style="--for-delay: 5"></div>
+      <div style="--for-delay: 6">T</div>
+      <div style="--for-delay: 7">a</div>
+      <div style="--for-delay: 8">g</div>
+    </div>
+    <!-- End Title  -->
+
+    <!-- Start wrapper  -->
+    <div class="wrapper">
+      <div class="menu">
+        <div class="menu-header">
+          <h1>NAME TAG GENERATOR</h1>
+          <h4 class="byline">
+            by Ibrahim Sahhar &middot;
+            <a href="https://github.com/IbrahimSahhar">IbrahimSahhar.com</a>
+          </h4>
+        </div>
+        <div class="menu-body">
+          <!-- Start Form -->
+          <form>
+            <div class="form-question">
+              <div class="question-label">
+                <label for="name">NAME</label>
+              </div>
+              <div class="question-input">
+                <input type="text" name="name" id="name" />
+              </div>
+            </div>
+            <div class="form-question">
+              <div class="question-label">
+                <label for="language">LANGUAGE</label>
+              </div>
+              <div class="question-input">
+                <select name="language" id="language">
+                  <option value="eng">English</option>
+                  <option value="ar">العربية</option>
+                  <option value="esp">Español</option>
+                  <option value="fra">Français</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-question">
+              <div class="question-label">
+                <label for="tag-color">TAG COLOR</label>
+              </div>
+              <div class="question-input">
+                <input
+                  type="color"
+                  name="tag-color"
+                  id="tag-color"
+                  value="#c7210f"
+                />
+              </div>
+            </div>
+            <div class="form-question">
+              <div class="question-label">
+                <label for="name-color">NAME COLOR</label>
+              </div>
+              <div class="question-input">
+                <input
+                  type="color"
+                  name="name-color"
+                  id="name-color"
+                  value="#222222"
+                />
+              </div>
+            </div>
+            <div class="form-question">
+              <button type="submit" id="submit" class="generate-button">
+                GENERATE
+              </button>
+            </div>
+          </form>
+          <!-- End Form -->
+        </div>
+      </div>
+    </div>
+    <!-- End wrapper  -->
+    <div class="generate"></div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

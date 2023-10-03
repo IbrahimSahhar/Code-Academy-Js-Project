@@ -1,0 +1,265 @@
+/* Start variable */
+
+:root {
+    --x: 0.625rem;
+}
+
+/* End variable */
+
+/* Start Global Rules */
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* End Global Rules */
+
+/* Start Title */
+.title {
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 5vh;
+    font-size: xxx-large;
+    color: #5d9ad7;
+    -webkit-box-reflect: below -0.9375rem Linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+
+.title>div {
+    display: inline-block;
+    animation: title-anim 1.5s infinite;
+    animation-fill-mode: both linear;
+    animation-delay: calc(0.1s * var(--for-delay));
+}
+
+@keyframes title-anim {
+    0% {
+        transform: translateY(0);
+    }
+
+    33% {
+        transform: translateY(-1.25rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* End Title */
+
+
+
+
+/* Start Wrapper */
+.wrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper>* {
+    margin: 0 auto;
+    width: min(26.25rem, 100%);
+    border-radius: 0.9375rem;
+}
+
+@media (max-height: 46.875rem) {
+    .wrapper {
+        display: block;
+        height: 100%;
+    }
+
+    body {
+        padding: 1.25rem;
+    }
+}
+
+/* End Wrapper */
+
+/* Start Menu */
+
+.menu {
+    border: 0.125rem solid lightgrey;
+    margin-bottom: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #222;
+    padding: 1.25rem;
+}
+
+.menu-header {
+    text-align: center;
+    padding-bottom: 1.25rem;
+    margin-bottom: 0.9375rem;
+    border-bottom: 0.0625rem solid grey;
+}
+
+/* for mobile */
+@media (max-width: 48rem) {
+    .menu-header h1 {
+        font-size: 1.25rem;
+    }
+
+    .menu-header h4 {
+        font-size: 0.7rem;
+    }
+
+}
+
+.byline {
+    font-weight: 400;
+}
+
+.byline a {
+    color: blue;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.byline a:hover {
+    color: grey;
+}
+
+.menu-header>* {
+    margin: 0;
+}
+
+.menu-body {
+    width: 100%;
+}
+
+/* End Menu */
+
+/* Start Form */
+.form-question {
+    margin: 0.625rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.question-label {
+    flex: 1;
+    text-align: right;
+    margin-right: 0.9375rem;
+    font-weight: bold;
+}
+
+label[for=name] {
+    font-size: 1.5em;
+}
+
+.question-input {
+    flex: 1;
+}
+
+.form-question select {
+    padding: 0.3125rem;
+    font-size: 1em;
+    width: 6rem;
+    border: 0.0625rem solid lightgrey;
+}
+
+.form-question input[type=text] {
+    padding: 0.3125rem;
+    font-size: 1em;
+    border: 0.0625rem solid lightgrey;
+    border-radius: 0.1875rem;
+    color: #222;
+    width: 6rem;
+}
+
+.form-question input[type=color] {
+    cursor: pointer;
+    border: 0.0625rem solid lightgrey;
+    border-radius: 0.1875rem;
+    padding: 0;
+    margin: 0;
+}
+
+.generate-button {
+    border: none;
+    background-color: lightgrey;
+    border-radius: 62.4375rem;
+    font-size: 1.5em;
+    padding: 0.3125rem 1.25rem;
+    font-weight: bold;
+    margin-top: 0.9375rem;
+}
+
+.generate-button:hover {
+    background-color: rgb(180, 180, 180);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.generate-button:active {
+    color: currentColor;
+}
+
+/* for mobile */
+@media (max-width: 48rem) {
+    .question-label {
+        font-size: 1rem;
+    }
+
+    label[for=name] {
+        font-size: 1.2rem;
+
+    }
+}
+
+
+/* End Form */
+
+/* Start OutPut Space */
+.generate {
+    text-align: center;
+    width: 97vw;
+    margin: 1vh 1vw;
+    min-height: 60vh;
+    border-radius: 0.3125rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(12.5rem, 1fr));
+    gap: 1.25rem;
+}
+
+/* End OutPut Space */
+
+
+/* for med */
+@media (min-width: 48rem) and (max-width: 62.5rem) {
+    .generate {
+        grid-template-columns: repeat(3, minmax(12.5rem, 1fr));
+    }
+}
+
+/* for mobile */
+@media (max-width: 48rem) {
+    .generate {
+        grid-template-columns: repeat(1, minmax(12.5rem, 1fr));
+    }
+
+    .nametag {
+        height: 14rem;
+        margin-right: auto;
+        width: 91%;
+    }
+
+    .deleteAll {
+        right: 5.25rem;
+        top: -3.125rem;
+        padding: 0.425rem 0.7375rem;
+        font-size: 1rem
+    }
+}
